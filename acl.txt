@@ -1,0 +1,69 @@
+R1(config)# access-list ?
+
+
+R1(config)# access-list 100 ?
+
+R1(config)# access-list 100 permit ?
+
+R1(config)# access-list 100 permit tcp ?
+
+R1(config)# access-list 100 permit tcp 172.22.34.64 ?
+
+R1(config)# access-list 100 permit tcp 172.22.34.64 0.0.0.31 ?
+
+
+access-list 100 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62
+?
+
+access-list 100 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 eq ?
+
+access-list 100 permit tcp 172.22.34.64 0.0.0.31 host 172.22.34.62 eq ftp
+
+
+R1(config-if)# interface gigabitEthernet 0/0
+R1(config-if)# ip access-group 100 
+
+
+
+
+
+
+
+
+
+HTTTp - 
+
+
+
+
+
+R1(config)# ip access-list ?
+
+R1(config)# ip access-list extended HTTP_ONLY
+
+R1(config-ext-nacl)# permit tcp 172.22.34.96 ?
+
+R1(config-ext-nacl)# permit tcp 172.22.34.96 0.0.0.15 ?
+
+R1(config-ext-nacl)# permit tcp 172.22.34.96 0.0.0.15 host 172.22.34.62 eq www
+
+
+R1(config-ext-nacl)# permit icmp 172.22.34.96 0.0.0.15 host 172.22.34.62
+
+R1(config)# interface gigabitEthernet 0/1
+R1(config-if)# ip access-group HTTP_ONLY
+
+Ping from PC2 to Server.
+
+
+
+
+
+
+
+
+
+
+
+
+
